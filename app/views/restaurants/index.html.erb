@@ -1,11 +1,17 @@
 <h1>Rate-a-Restaurant</h1>
   <%= link_to 'Add new', new_restaurant_path %>
 
-  <% @restaurants.each do |restaurant| %>
-    <h4><%= restaurant.name %></h4>
-    <%= link_to 'Show', restaurant_path(restaurant) %>
-    <%= link_to 'Edit', edit_restaurant_path(restaurant) %>
-    <%= link_to 'Delete', restaurant_path(restaurant) %>
-  <% end %>
+    <% @restaurants.each do |restaurant| %>    
+  <div class="sep">
+      <h5><%= restaurant.name %></h5>
+      
+        
+      <%= link_to 'Show', restaurant_path(restaurant), {class: "pbtn"} %>
+      <%= link_to 'Edit', edit_restaurant_path(restaurant), {class: "pbtn"} %>
+      <%= link_to 'Delete', restaurant_path(restaurant), {method: :delete, class: "pbtn"} %>
+  </div>
+    <% end %>
+
+
 
 

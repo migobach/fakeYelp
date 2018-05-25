@@ -5,6 +5,8 @@
   <%= f.label :like %>
   <%= f.select(:like, options_for_select([['True', true], ['False', false]], @restaurant.like)) %>
 
+  <%= f.label :rating %>
+  <%= f.select :rating, [1,2,3,4,5]%>
 
   <%= f.label :description %>
   <%= f.text_area :description %>
@@ -15,5 +17,5 @@
   <%= f.label :location %>
   <%= f.text_field :location %>
 
-  <%= f.submit %>
+  <button class="waves-effect pink btn-large"> <%= f.submit %> </button>
 <% end %>
